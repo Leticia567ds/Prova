@@ -1,5 +1,6 @@
 var chamada = "http://localhost:3000/read"
 
+
 var cha = [];
 
 
@@ -29,3 +30,18 @@ function listar(){
     })
 }
 
+
+
+
+  function remover(id, item){
+    fetch("http://localhost:3000/delete/" + id,{
+        "methodo":"DELETE"
+    })
+    .then(resp =>{return resp.json()})
+    .then(data =>{
+        item.remove();
+    });
+  }
+
+
+  
