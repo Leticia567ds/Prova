@@ -2,7 +2,7 @@
 class Chamado {
 
     create(dados) {
-        return `INSERT INTO chamados VALUES (default,'${dados.tipo}',${dados.severidade},'${dados.descricao}',curdate(),curtime(),'00:00:00','00:00:00','${dados.destino}')`;
+        return `INSERT INTO chamados VALUES (default,'${dados.tipo}',${dados.severidade},'${dados.descricao}',curdate(),curtime(),curtime,'${dados.destino}')`;
     }
 
     readAll() {

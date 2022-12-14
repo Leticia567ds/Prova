@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,55 +8,89 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+
 <body onload="listar()">
     <header>
-     <h1>Chamados</h1>
-     <button>Criar</button>
+        <h1>Chamados</h1>
+        <button onClick="cadastrar()">Criar</button>
     </header>
-<main>
-    <div class="Princi">
-    <div  class="tabela model">
-    <table class="tbt">
-        <thead class="campos-chamada">
-            <tr>
-                <th>Id</th>
-                <th>tipo</th>
-                <th>Serveridade</th>
-                <th>Descrição</th>
-                <th>Data</th>
-                <th>Hora</th>
-                <th>Hora Inicio</th>
-                <th>Hora Fim</th>
-                <th>Destino</th>
-                <th>Ação</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="corpinho model">
-                <td id="a"></td>
-                <td id="b"></td>
-                <td id="c"></td>
-                <td id="d"></td>
-                <td id="e"></td>
-                <td id="f"></td>
-                <td id="g"></td>
-                <td id="h"></td>
-                <td id="i"></td>
-                <td><img class="icon" src="https://cdn-icons-png.flaticon.com/512/8265/8265219.png" alt="plus"></td>
-                <td><button onclick="remover()" id="del"><img class="icon2" src="https://cdn-icons-png.flaticon.com/512/32/32178.png" alt="lixo"></button></td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-</div>
-</main>
+    <main>
+        <div class="Princi">
+            <div class="tabela model">
+                <table class="tbt">
+                    <thead class="campos-chamada">
+                        <tr>
+                            <th>Id</th>
+                            <th>tipo</th>
+                            <th>Serveridade</th>
+                            <th>Descrição</th>
+                            <th>Data</th>
+                            <th>Hora</th>
+                            <th>Hora Inicio</th>
+                            <th>Hora Fim</th>
+                            <th>Destino</th>
+                            <th>Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="corpinho model">
+                            <td id="a"></td>
+                            <td id="b"></td>
+                            <td id="c"></td>
+                            <td id="d"></td>
+                            <td id="e"></td>
+                            <td id="f"></td>
+                            <td id="g"></td>
+                            <td id="h"></td>
+                            <td id="i"></td>
+                            <td><button onclick="AbrirModal(${c.id})" class="hi"><img class="icon" src="https://cdn-icons-png.flaticon.com/512/8265/8265219.png"
+                                alt="plus"></td></button>
 
-<div class="modal ">
-    <div class="body">
-   
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <div class="modal editar model">
+        <div class="modal-content">
+            <button onclick="FecharModal()"><img class="icone"
+                    src="https://cdn-icons-png.flaticon.com/512/1828/1828665.png" alt="Icone de Fechar"> </button>
+            <div class="modal-content-body">
+                <input type="text" class="input" id="tipo" placeholder="tipo">
+                <input type="text"  class="input" id="severidade" placeholder="Severidade">
+                <input type="text"  class="input" id="descricao" placeholder="descricao">
+                <input type="text"  class="input" id="destino" placeholder="destino">
+            </div>
+            <div class="modal-content-footer">
+                <button onclick="cadastrar()" id="cadastro" class="btn confirm">Cadastrar</button>
+                <button onclick="FecharModal()" class="btn cancel">Cancelar</button>
+            </div>
         </div>
     </div>
-</div>
+
+    <div class="modal alterar model">
+        <div class="content">
+            <button onclick=""><img class="icone"
+                    src="https://cdn-icons-png.flaticon.com/512/1828/1828665.png" alt="Icone de Fechar"> </button>
+            <div class="content-body">
+                <input type="text" class="input" id="tipo" placeholder="tipo">
+                <input type="text"  class="input" id="severidade" placeholder="Severidade">
+                <input type="text"  class="input" id="descricao" placeholder="descricao">
+                <input type="text"  class="input" id="data" placeholder="data">
+                <input type="text"  class="input" id="hora" placeholder="hora">
+                <input type="text"  class="input" id="horain" placeholder="hora de inicio">
+                <input type="text"  class="input" id="horaf" placeholder="hora de fim">
+                <input type="text"  class="input" id="destino" placeholder="destino">
+            </div>
+            <div class="content-footer">
+                <button onclick="alterar()" id="alterar" class="btn confirm">Alterar</button>
+                <button onclick="" class="btn cancel">Cancelar</button>
+            </div>
+        </div>
+    </div>
 </body>
 <script src="index.js"></script>
+
 </html>

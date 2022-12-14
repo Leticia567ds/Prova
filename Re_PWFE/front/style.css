@@ -55,6 +55,12 @@ main{
     font-family:unset;
 }
 
+.hi{
+    outline:none;
+    border: none;
+    background-color:none;
+}
+
 .tabela td{
     padding:9px;
     align-items: center;
@@ -62,11 +68,19 @@ main{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+.modelcard{
+    display: none;
+    visibility: hidden;
+}
+/* .modelAlter{
+    display: none;
+    visibility: hidden;
+} */
 .model{
     display: none;
     visibility: hidden;
     
-    }
+}
  .icon{
     width:25px;
  }
@@ -84,9 +98,98 @@ main{
     top: 10%;
     left: 25%;
     /* position: fixed; */
-    width: 50vw;
-    height: 50vh;
-    background-color: #7f7f7f;
+   
   
 }
+.modal-content {
+    width: 40vw;
+    height: 30vh;
+    background-color: #7f7f7f;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom:15px;
+    padding: 20px 40px;
+    justify-content: space-evenly;
+    border-radius: 30px;
+    
+}
+.content{
+        width: 40vw;
+        height: 30vh;
+        background-color: #7f7f7f;
+        border-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom:15px;
+        padding: 20px 40px;
+        justify-content: space-evenly;
+        border-radius: 30px;
+}
 
+.modal-content-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+.content-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+.content > button{
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 10px 30px;
+}
+
+.modal-content > button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 10px 30px;
+}
+
+
+
+.modal-content-body {
+    margin-top: 10px;
+    display:flex ;
+    flex-direction: column;
+}
+
+.icone{
+    width: 15px;
+}
+
+input{
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px;
+    border: 1px solid #0d3116;
+}
+
+.cancel {
+    /* margin: 10px; */
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    background-color: #fa2828; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.cancel:hover{
+    background-color: #ff0b0b; 
+}
+.confirm:hover{
+    background-color: #1c8a37;
+}
+.confirm {
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    background-color: #206d33;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
